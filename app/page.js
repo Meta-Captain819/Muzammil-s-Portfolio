@@ -1,101 +1,116 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion, px } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs, SiMongodb, SiTailwindcss } from "react-icons/si";
+import Features from "./components/Features";
+import SkillsSection from "./components/Skills";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-transparent text-white px-6 sm:px-12 py-12">
+      <motion.div initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <section className="flex flex-col items-center text-center space-y-6 ">
+          <h3 className="text-lg font-semibold text-gray-400">Welcome to My Portfolio</h3>
+          <span className="text-4xl sm:text-5xl font-extrabold text-darkBlue sm:flex gap-2">
+            <h1 className="text-white">Hello, I’m </h1> Muzammil Mehdi
+
+          </span>
+
+          <h2 className="text-xl sm:text-4xl font-medium text-gray-500">
+            <Typewriter words={["Full Stack Web Developer", "Next.js Expert", "Creative Coder"]} loop={true} cursor />
+          </h2>
+          <p className="text-gray-200 w-full md:w-3/4">I am a highly skilled Full Stack Web Developer specializing in Next.js, React, and Tailwind CSS, with expertise in building modern, scalable, and high-performance web applications. From front-end design to back-end architecture and database management, I create seamless, user-friendly experiences. My portfolio showcases e-commerce platforms, admin dashboards, and global payment solutions, highlighting my ability to develop efficient, secure, and responsive web solutions.</p>
+
+          <section className="mt-16 flex flex-col lg:flex-row justify-center items-center lg:items-start gap-16 w-full max-w-5xl">
+
+            <div className=" sm:mt-16 flex flex-col items-center rounded-lg shadow-lg ">
+              <h3 className="text-xl font-semibold mb-4">Connect with Me</h3>
+              <div className="flex space-x-4">
+                {[
+                  { href: "https://github.com/Meta-Captain819", icon: <FaGithub size={20} />, label: "GitHub" },
+                  { href: "https://linkedin.com", icon: <FaLinkedin size={20} />, label: "LinkedIn" },
+                  { href: "https://x.com/MetaCaptain6?t=Uq08F7EVnXqaqttcKg7Dlw&s=08", icon: <FaTwitter size={20} />, label: "Twitter" },
+                ].map((link, index) => (
+                  <Link key={index} href={link.href} target="_blank">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      className="flex items-center space-x-2 px-4 py-2 shadow-black transition-all duration-500  bg-darkBlue rounded-lg shadow-xl"
+                    >
+                      {link.icon}
+                    </motion.button>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="sm:mt-16 flex flex-col items-center  rounded-lg shadow-lg ">
+              <h3 className="text-xl font-semibold mb-4">Expert Skills</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  { name: "", icon: <SiNextdotjs size={20} /> },
+                  { name: "", icon: <FaReact size={20} /> },
+                  { name: "", icon: <SiTailwindcss size={20} /> },
+                  { name: "", icon: <FaNodeJs size={20} /> },
+                  { name: "", icon: <SiMongodb size={20} /> },
+                ].map((skill, index) => (
+                  <motion.span
+                    key={index}
+                    whileHover={{ scale: 1.1, cursor: "pointer" }}
+                    className="flex items-center shadow-black  px-4 py-2 transition-all duration-500 bg-gray-800 rounded-lg shadow-xl"
+                  >
+                    {skill.icon}
+                    <span>{skill.name}</span>
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+          </section>
+        </section>
+      </motion.div>
+      <div className="mt-20">
+
+        <Features />
+      </div>
+
+      <div className="mt-12">
+
+<SkillsSection />
+</div>
+
+<motion.div
+
+initial={{opacity:0, y:100}}
+transition={{duration:1.5}}
+
+whileDrag={{opacity:0, y:100}}
+whileInView={{opacity:1, y:5}}>
+
+      <div className="flex flex-col justify-center items-center gap-8">
+        <h1 className="text-darkBlue mx-auto text-4xl font-extrabold">Explore Portfolio</h1>
+        <p className="w-3/4 text-center">
+          Explore my portfolio to discover a diverse collection of websites I have built using various web development technologies, including modern frameworks, dynamic programming languages, and efficient database management systems. Each project showcases my expertise in front-end and back-end development, responsive design, and seamless user experiences.
+        </p>
+        <Link href="/portfolio">
+          <motion.button
+            whileHover={{ scale: 1.1, backgroundColor: "#112cec", }}
+            whileTap={{ scale: 0.2 }}
+            className="px-16 py-4 bg-darkBlue text-white font-semibold rounded-lg shadow-xl shadow-black hover:shadow-darkGray transition-all duration-500"
+            >
+            Portfolio
+          </motion.button>
+        </Link>
+      </div>
+            </motion.div>
+
+            
+
     </div>
   );
 }
