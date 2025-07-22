@@ -33,6 +33,7 @@ const SocialLinks = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
+        {/* This is for title */}
         <h2 className="text-4xl font-bold text-white">Connect With Me</h2>
         <p className="text-lg text-gray-400 mt-2">Find me on these platforms</p>
       </motion.div>
