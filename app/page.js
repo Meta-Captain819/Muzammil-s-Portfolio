@@ -35,7 +35,7 @@ export default function Home() {
               <div className="flex space-x-4">
                 {[
                   { href: "https://github.com/Meta-Captain819", icon: <FaGithub size={20} />, label: "GitHub" },
-                  { href: "https://linkedin.com", icon: <FaLinkedin size={20} />, label: "LinkedIn" },
+                  { href: "https://www.linkedin.com/in/muzammil-mehdi-502a91226/", icon: <FaLinkedin size={20} />, label: "LinkedIn" },
                   { href: "https://x.com/MetaCaptain6?t=Uq08F7EVnXqaqttcKg7Dlw&s=08", icon: <FaTwitter size={20} />, label: "Twitter" },
                 ].map((link, index) => (
                   <Link key={index} href={link.href} target="_blank">

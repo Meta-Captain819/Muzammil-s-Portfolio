@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="mt-6 md:mt-0 flex space-x-4">
           {[
             { icon: <FaGithub size={24} />, link: "https://github.com/Meta-Captain819" },
-            { icon: <FaLinkedin size={24} />, link: "https://linkedin.com" },
+            { icon: <FaLinkedin size={24} />, link: "https://www.linkedin.com/in/muzammil-mehdi-502a91226/" },
             { icon: <FaTwitter size={24} />, link: "https://x.com/MetaCaptain6?t=Uq08F7EVnXqaqttcKg7Dlw&s=08" },
           ].map((social, index) => (
             <motion.a

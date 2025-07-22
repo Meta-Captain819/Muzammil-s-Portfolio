@@ -13,7 +13,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: <FaLinkedin size={40} className="text-white" />,
-    url: "https://linkedin.com/in/your-profile",
+    url: "https://www.linkedin.com/in/muzammil-mehdi-502a91226/",
     bg: "bg-blue-600",
   },
   {
